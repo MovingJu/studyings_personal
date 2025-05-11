@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'ledongche';
+    /* ttf보단 용량이 적은 웹용 폰트 woff를 쓰자. */
+    src: url(../font/NanumSquareNeoTTF-bRg.woff);
+}
+
+@font-face {
+    font-family: 'ledongche';
+    font-weight: 900;
+    /* ttf보단 용량이 적은 웹용 폰트 woff를 쓰자. */
+    src: url(../font/NanumSquareNeoTTF-eHv.woff);
+}
+
+/* google font 쓰기 -> 좀 더 최적화 */
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+
+
+
+p, h4, h3, h2, h1, span {
+    transform: rotate(0.03deg);
+}
+
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'ledongche';
+    font-weight: 900;
+    /* font-family: "Nanum Gothic", serif;
+    font-weight: 400;
+    font-style: normal; */
+}
+
+td, th {
+    /* border: 1px solid black; */
+    text-align: right;
+}
+
+p {
+    margin-top: 5px;
+}
+
+table {
+    /* border-top: 1px solid #444444; */
+    border-collapse: collapse;
+
+}
+strong {
+    color: black;
+}
+
+.shop-box {
+
+    padding: 0px;
+    background-color: white;
+
+
+    border-radius: 8px;
+    display: inline-block;
+    color: #0060a4;
+}
+
+.shop-table th, .shop-table td {
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-bottom: 1px solid #444444;
+}
+
+.shop-table td:nth-child(1){
+    width: 1000px;
+    text-align: left;
+}
+
+.shop-table thead td{
+    border-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.shop-table thead td:nth-child(1) {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.merch {
+    width: 90px;
+    margin: 10px;
+}
+.contend {
+    float: left;
+}
+
+.pay-btn {
+    float: right; 
+    width: 200px; 
+    padding: 10px;
+    height: 50px; 
+    background-color: #002660;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* 순서 중요함, button, input, a(href)에 많이씀. */
+.pay-btn:hover {
+    background-color: #001a3e;
+}
+.pay-btn:focus{
+    background-color: rgb(53, 53, 53);
+}
+.pay-btn:active{
+    background-color: #000000;
+}
+.input-test{
+    font-size: 20px;
+}
+.link-test{
+    text-decoration: none;
+}
+.link-test:link {
+    color: red;
+}
+.link-test:visited {
+    color: blue;
+}
