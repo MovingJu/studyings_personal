@@ -9,7 +9,7 @@ fn main(){
 
     let b: [i32; 5];
     b = [1;5];
-    println!("{:?}", b);
+    println!("{:?}", b)
 
 
     let mut v = vec![1,2,3];
