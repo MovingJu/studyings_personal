@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <h1 id="hello">hello</h1>
+
+    <div class="alert-box" id="box">
+        <p>alarm</p>
+        <button onclick="box_close()">close</button>
+    </div>
+    
+    <button onclick="show_box()">button</button>
+
+    <script>
+        function show_box(){
+            document.getElementById('box').style.display = 'block';
+        }
+        function box_close(){
+            document.getElementById('box').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
