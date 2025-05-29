@@ -8,9 +8,9 @@ struct IndexTemplate;
 
 #[tokio::main]
 async fn main() {
-    let app = Router::new().route("/", get(show_hello));
+    let app: Router = Router::new().route("/", get(show_hello));
 
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let addr: SocketAddr = SocketAddr::from(([127, 0, 0, 1], 3000));
     println!("서버 실행 중: http://{}", addr);
 
     // ✅ axum 0.7은 여기서 직접 bind + serve 가능함!
@@ -18,7 +18,7 @@ async fn main() {
         tokio::net::TcpListener::bind(addr).await.unwrap(),
         app.into_make_service(),
     )
-    .await
+    .await 
     .unwrap();
 }
 
