@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/cmake_install.cmake",
+		"/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/extern/pybind11/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -bundle -Wl,-headerpad_max_install_names -Xlinker -undefined -Xlinker dynamic_lookup -flto -o lang.cpython-310-darwin.so CMakeFiles/lang.dir/src/main.cpp.o

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <h1 id="hello">hello</h1>
+
+    <div class="alert-box" id="box">
+        <p style="color: black;" id="explain">fill this blank</p>
+        <div>
+            <form method="get">
+                <input type="text" name="none" id="return">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        <button id="close" style="margin-top: 10px;">close</button>
+    </div>
+    
+    <button onclick="box_display('box', 'block', 'id')" style="margin-top: 10px;">My ID</button>
+    <button onclick="box_display('box', 'block', 'pw')" style="margin-top: 10px;">My PW</button>
+    
+    <script>
+        // event listener 문법
+        document.getElementById('close').addEventListener("mouseover", function(){
+            box_display('box', 'none', 'pass')
+        })
+        function box_display(id, status, explain){
+            // selector 문법
+            document.getElementById(id).style.display = status;
+            document.getElementById('explain').innerHTML = 'Enter ' + explain;
+            document.getElementById('return').name = explain;
+            if (explain === 'pw'){
+                document.getElementById('return').type = 'password';
+            }
+        }
+    </script>
+
+</body>
+</html>

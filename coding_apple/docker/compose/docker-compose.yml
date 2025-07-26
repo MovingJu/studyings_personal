@@ -1,0 +1,47 @@
+services:
+  node_server:
+    image: node_server:1
+    command: ["nodemon", "server.js"] # Dockerfile 의 마지막 CMD 를 덮어씌움.
+    ports:
+      - 8080:8080
+    depends_on:
+      - db-container
+    networks:
+      - nginx_net   # 컨테이너와 이름이 겹치면 안됨!
+      - db_net
+    restart: always
+    build: .
+    develop:
+      watch: # build 가 있어야 watch도 잘 작동함, --watch 하면 -d 는 못씀.
+        - action: sync+restart
+          path: .
+          target: /app
+          ignore:
+            - node_modules/ # .dockerignore에 있으면 무시되니 그거나 잘 쓰기.
+        - action: rebuild
+          path: package.json
+  nginx:
+    image: nginx:1
+    ports:
+      - 80:80
+    depends_on:
+      - node_server
+    networks:
+      - nginx_net
+    build: ./nginx
+  
+  db-container:
+    image: postgres:1
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ./vol:/var/lib/postgresql/data
+    networks:
+      - db_net
+
+networks:
+  nginx_net:
+  db_net:

@@ -1,0 +1,15 @@
+p {
+    font-size: 20px;
+    letter-spacing: 1px; 
+    text-align: center;
+    color: #E9972D;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+h1 {
+    font-size: 30px; 
+    color: black; 
+    letter-spacing: 3px; 
+    text-align: center;
+}
+

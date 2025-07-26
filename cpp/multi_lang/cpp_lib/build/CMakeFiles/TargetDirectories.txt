@@ -1,0 +1,5 @@
+/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/CMakeFiles/cpp.dir
+/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/CMakeFiles/edit_cache.dir
+/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/CMakeFiles/rebuild_cache.dir
+/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/extern/pybind11/CMakeFiles/edit_cache.dir
+/Users/galesky/Documents/GitHub/studyings_personal/cpp/multi_lang/cpp_lib/build/extern/pybind11/CMakeFiles/rebuild_cache.dir
